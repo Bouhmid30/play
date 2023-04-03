@@ -1,8 +1,8 @@
 ---
--name: Configure a basic web server
- hosts: web
- become: true
- tasks:
+- name: Configure a basic web server
+  hosts: web
+  become: true
+  tasks:
    - name: Install software
      ansible.builtin.yum:
        name:
