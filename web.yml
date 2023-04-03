@@ -13,9 +13,7 @@
    - name: Start and enable services
      ansible.builtin.service:
        name: "{{ item }}"
-       immediate: true
-       permanent: true
-       state: enabled
+       state: started
      loop:
        - httpd
        - firewalld
